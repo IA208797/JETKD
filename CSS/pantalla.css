@@ -1,0 +1,236 @@
+/* -----=====   FUENTES   =====----- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+/* -----=====   ROOT   =====----- */
+:root {
+    --bg: #FFFFFF;
+    --bg1: #F4F4F4;
+    --color1: #F74464;
+    --hover: rgb(245, 93, 121);
+    --color2: #374258;
+    --color3: #6A7285;
+    --color4: #C4C4C4;
+    --font-title: 'Raleway', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+    --size:18px;
+}
+/* -----===== UNIVERSALES (HTML, BODY, MAIN)=====----- */
+*{
+    margin: 0%;
+}
+html{
+    font-size: var(--size);
+    background-color: var(--bg1);
+}
+body{
+    font-family: var(--font-texto);
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+/* -----===== Contenido =====----- */
+section{
+    padding-top: 10%;
+}
+#principal{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+.inicio {
+    background-color: #f4f4f4;
+    display: flex;
+    height: auto;
+}
+.mascota1, .logo, .mascota2 {
+    flex: 1;
+    margin: 1.5%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mascota1 img, .mascota2 img, .imagen img, .gatito img{
+    max-width: 100%; 
+    max-height: 100%; 
+    width: 50%; 
+    height: auto; 
+}
+.logo img{
+    max-width: 100%; 
+    max-height: 100%; 
+    width: 100%; 
+    height: auto; 
+}
+.enunciado {
+    background-color: #f4f4f4;
+    display: flex;
+    height: 70px;
+}
+.eslogan {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    width: 90%;
+    height: 50px;
+    margin: 15px auto 0;
+    margin-top: 0;
+    margin-bottom: 1.5%;
+    text-align: center;
+}
+.concepto{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #374258;
+}
+.imagen {
+    flex: 1;
+    width: calc(50% - 3%);
+    margin: 1.5%;
+    height: 250px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.descripcion {
+    flex: 1;
+    width: calc(50% - 3%);
+    margin: 1.5%;
+    height: auto;
+    position: relative;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    box-sizing: border-box; 
+    padding: 10px;
+    line-height: 30px;
+}
+.descripcion p{
+    margin-top: 40px;
+}
+.espacio {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background-color: #6A7285;
+}
+.carrusel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carrusel img {
+    width: 300px;
+    margin: 1% 1% 1% 0; 
+}
+.carrusel img.active {
+    transform: scale(1.2); 
+    transition: transform 0.5s ease-in-out;
+    cursor: pointer;
+}
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    padding: 2% 1%;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.776);
+    border: none;
+    color: white;
+    outline: none;
+}
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+.carrusel-container.touch {
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+/* -----===== MEDIAS QUERIES =====----- */
+@media only screen and (max-width: 2000px){
+    .descripcion {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 838px){
+    .eslogan {
+        font-size: 35px;
+    }
+    .descripcion {
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 720px){
+    section{
+        padding-top: 20%;
+    }
+    #logo{
+        width: 50%;
+    }
+    .logo img, .mascota1 img, .mascota2 img, .imagen img, .gatito img{ 
+        margin-top: 15%;
+    }
+}
+@media only screen and (max-width: 692px){
+    .concepto{
+        height: 360px;
+    }
+    .carrusel img {
+        width: 300px;
+        margin: .5% 1% .5% 0; 
+    }
+}
+@media only screen and (max-width: 600px) {
+    .inicio {
+        flex-direction: column;
+    }
+    .mascota1, .logo, .mascota2 {
+        flex: 1;
+        margin: 1.5%;
+        height: auto;
+    }
+    .eslogan {
+        font-size: 30px;
+    }
+    .concepto {
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+    }
+    .imagen, .descripcion {
+        width: 100%;
+    }
+    .mascota2{
+        display: none;
+    }
+    .logo img, .mascota1 img, .mascota2 img, .imagen img, .gatito img{ 
+        margin-top: 5%;
+    }
+    .logo img{
+        width: 80%; 
+    }
+    .carrusel img.active {
+        transform: none; 
+        transition: none; 
+        cursor: default; 
+    }
+    .prev {
+        display: none;
+    }
+    .next {
+        display: none;
+    }
+    .carrusel-container.touch {
+        overflow-x: scroll;
+    }
+}

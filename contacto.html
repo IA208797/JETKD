@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juarez Elite Taekwondo</title>
+    <link rel="stylesheet" href="CSS/foundation.css">
+    <link rel="stylesheet" href="CSS/pantalla.css">
+    <link rel="stylesheet" href="CSS/app-t.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;800&display=swap"
+        rel="stylesheet">
+    <style>
+        img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+            display: none;
+        }
+    </style>
+    <script src="js/functions.js"></script>
+    <link rel="shortcut icon" href="img/logo/isologo.svg" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <!--INICIO DE ENCABEZADO / BARRA DE NAVEGACION--> 
+        <header class="main-header" id="inicio">
+            <div class="main-logo">
+                <a href="index.html">
+                <img id="logo" src="img/logo/isologo.svg">
+                </a>
+            </div>
+            <nav id="nav" class="main-nav">
+            <div class="nav-links" >
+                <a class="link-item" href="eventos.html">Eventos</a>
+                <a class="link-item" href="galeria.html">Galería</a>
+                <a class="link-item" href="conocenos.html">Conócenos </a>
+                <a id="btn-slice" class="link-item" href="contacto.html">
+                    <div class="top"><span></span></div>
+                    <div class="bottom"><span>Contacto</span></div>
+                </a>
+            </div>
+            </nav>
+            <button id="button-menu" class="button-menu">
+            <span id="finger"></span>
+            <span></span>
+            <span id="finger"></span>
+            </button>
+        </header>
+        <!--FIN DE ENCABEZADO / BARRA DE NAVEGACION-->  
+
+        <!-- INICIA FORMULARIO -->
+        <section class="grid-container full">
+            <div class="grid-x">
+                <div class="cell grid-x form-i large-6 grid-padding-x align-center align-middle">
+                    <br><br>
+                    <div class="cell small-8 medium-8 large-8 ">
+                        <h2 id="h2-contacto">Contáctanos para obtener más información.</h2>
+                    </div>
+                    <div class="cell small-4 medium-4 large-6">
+                        <img src="img/EventosYContacto-img/Group 22.svg" alt="">
+                    </div>
+                    <br><br>
+                </div>
+                <div class="cell large-6 form-d">
+                    <br><br>
+                    <form action="submit_correo.php" method="post">
+                        <div class="grid-container ">
+                            <div class="grid-x grid-padding-x align-center ">
+                                <div class="cell medium-6 large-8">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" placeholder="Tu nombre" name="nombre" maxlength="100"
+                                        pattern="[a-zA-ZñÑáéíóúÁÉÍÓÚüÜ ]{3,100}"
+                                        title="Debe indicar su nombre correctamente." required>
+                                </div>
+                                <div class="cell medium-6 large-8">
+                                    <label for="email">Correo</label>
+                                    <input type="email" placeholder="Tu correo" name="email" maxlength="100"
+                                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                                        title="Debe indicar un correo válido" required>
+                                </div>
+                                <div class="cell medium-6 large-8">
+                                    <label for="telefono">Teléfono</label>
+                                    <input placeholder="Tu teléfono" type="tel" name="telefono" maxlength="10"
+                                        pattern="[0-9]{10}" title="Debe indicar un teléfono válido de 10 dígitos"
+                                        required>
+                                </div>
+                                <div class="cell medium-6 large-8">
+                                    <label for="mensaje">Mensaje</label>
+                                    <textarea placeholder="Tu mensaje" name="mensaje" rows="8" maxlength="140"
+                                        title="El mensaje no debe superar los 140 caracteres" required></textarea>
+                                </div>
+
+                                <div class="cell medium-shrink large-8">
+                                    <button class="button" type="submit" value="enviar">Enviar</button>
+                                </div>
+                            </div>
+                            <br><br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- TERMINA FORMULARIO -->
+
+        <!--INICIO DE PIE-->
+    <footer>
+        <div class="pie1">
+            <img src="img/logo/LogoNombre.svg" alt="Logo">
+        </div>    
+    
+        <div class="pie2">
+            <h2>Visítanos</h2>
+            <p>Avenida Henequen y Oaxaca, Ciudad Juárez.</p>
+            <p>Chihuahua, México.</p>
+            <p>656 159 0426</p>
+            <p>Investigaciones y Estudios Superiores, S.C. 2023.</p>
+            <p>Todos los Derechos Reservados.</p>
+        </div>    
+    
+        <div class="pie3" style="padding: 10px; box-sizing: border-box;">
+            <div class="redes">
+                <a href="https://www.facebook.com/JRZELITETKD/?locale=es_LA"><img src="img/facebook.png" alt="facebook"></a>
+            </div>
+            <div class="redes">
+                <a href="https://www.tiktok.com/@erickdjz"><img src="img/tiktok.png" alt="tiktok"></a>
+            </div>
+        </div>
+    </footer>
+    <!--FINAL DE PIE-->
+        <script>
+            var paneluno = document.getElementById("panel1");
+            var paneldos = document.getElementById("panel2");
+            var activo = "is-active";
+
+            function mostrar() {
+                if (paneluno.classList.contains(activo)) {
+                    document.getElementById("panel1").classList.toggle("is-active");
+                }
+                document.getElementById("panel2").classList.toggle("is-active");
+
+            }
+
+            function mostrar2() {
+                if (paneldos.classList.contains(activo)) {
+                    document.getElementById("panel2").classList.toggle("is-active");
+                }
+                document.getElementById("panel1").classList.toggle("is-active");
+
+            }
+
+            document.getElementById("tab-1").onclick = function () {
+                mostrar2();
+            }
+
+            document.getElementById("tab-2").onclick = function () {
+                mostrar();
+            }
+
+        </script>
+</body>
+
+</html>

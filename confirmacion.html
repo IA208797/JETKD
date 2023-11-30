@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juarez Elite Taekwondo</title>
+    <link rel="stylesheet" href="CSS/foundation.css">
+    <link rel="stylesheet" href="CSS/app-t.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;800&display=swap"
+        rel="stylesheet">
+    <style>
+        img[src*="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+            display: none;
+        }
+    </style>
+    <script src="js/functions.js"></script>
+    <link rel="shortcut icon" href="img/logo/isologo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/pantalla.css">
+</head>
+
+<body>
+    <main>
+        <!--INICIO DE ENCABEZADO / BARRA DE NAVEGACION--> 
+        <header class="main-header" id="inicio">
+            <div class="main-logo">
+                <a href="index.html">
+                <img id="logo" src="img/logo/isologo.svg">
+                </a>
+            </div>
+            <nav id="nav" class="main-nav">
+            <div class="nav-links" >
+                <a class="link-item" href="eventos.html">Eventos</a>
+                <a class="link-item" href="galeria.html">Galería</a>
+                <a class="link-item" href="conocenos.html">Conócenos </a>
+                <a id="btn-slice" class="link-item" href="contacto.html">
+                    <div class="top"><span></span></div>
+                    <div class="bottom"><span>Contacto</span></div>
+                </a>
+            </div>
+            </nav>
+            <button id="button-menu" class="button-menu">
+            <span id="finger"></span>
+            <span></span>
+            <span id="finger"></span>
+            </button>
+        </header>
+        <!--FIN DE ENCABEZADO / BARRA DE NAVEGACION-->  
+
+        <!-- INICIA FORMULARIO -->
+        <section class="grid-container full">
+            <div class="grid-x">
+                <div class="cell form-i large-12 grid-padding-x align-center-midle text-center">
+                    <div class="cell small-8 medium-8 large-8 ">
+                        <br><br>
+                        <h2 id="h2-contacto">Mensaje enviado correctamente. <br> ¡Pronto nos pondrémos en contacto con
+                            usted!</h2>
+                    </div>
+                    <div class="cell small-4 medium-4 large-4">
+                        <img src="img/EventosYContacto-img/Group 23.svg" alt="">
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- TERMINA FORMULARIO -->
+
+        <!--INICIO DE PIE-->
+    <footer>
+        <div class="pie1">
+            <img src="img/logo/LogoNombre.svg" alt="Logo">
+        </div>    
+    
+        <div class="pie2" style="font-size: 16px; line-height: 30px;">
+            <h2 style="font-size: 24px;">Visítanos</h2>
+            <p>Avenida Henequen y Oaxaca, Ciudad Juárez.</p>
+            <p>Chihuahua, México.</p>
+            <p>656 159 0426</p>
+            <p>Investigaciones y Estudios Superiores, S.C. 2023.</p>
+            <p>Todos los Derechos Reservados.</p>
+        </div>    
+    
+        <div class="pie3" style="padding: 10px; box-sizing: border-box;">
+            <div class="redes">
+                <a href="https://www.facebook.com/JRZELITETKD/?locale=es_LA"><img src="img/facebook.png" alt="facebook"></a>
+            </div>
+            <div class="redes">
+                <a href="https://www.tiktok.com/@erickdjz"><img src="img/tiktok.png" alt="tiktok"></a>
+            </div>
+        </div>
+    </footer>
+    <!--FINAL DE PIE-->
+        <script>
+            var paneluno = document.getElementById("panel1");
+            var paneldos = document.getElementById("panel2");
+            var activo = "is-active";
+
+            function mostrar() {
+                if (paneluno.classList.contains(activo)) {
+                    document.getElementById("panel1").classList.toggle("is-active");
+                }
+                document.getElementById("panel2").classList.toggle("is-active");
+
+            }
+
+            function mostrar2() {
+                if (paneldos.classList.contains(activo)) {
+                    document.getElementById("panel2").classList.toggle("is-active");
+                }
+                document.getElementById("panel1").classList.toggle("is-active");
+
+            }
+
+            document.getElementById("tab-1").onclick = function () {
+                mostrar2();
+            }
+
+            document.getElementById("tab-2").onclick = function () {
+                mostrar();
+            }
+
+        </script>
+</body>
+
+</html>

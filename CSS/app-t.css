@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+
+:root {
+    --bg1: #F4F4F4;
+    --rojo: #f74464;
+    --azul: #374258;
+    --azul-light: #6a7285;
+    --gris: #c4c4c4;
+    --blanco: #f4f4f4;
+    --font-title: 'Raleway', sans-serif; 
+    --font-text: 'Open Sans', sans-serif;
+}
+
+/*----==== Estilos generales para Eventos, Contacto y Confirmación ====---- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: var(--font-title);
+}
+
+#h2-contacto {
+    font-family: var(--font-title);
+    color: white;
+}
+
+hr {
+    border: none;
+    border-left: 1px solid hsla(200, 10%, 50%, 100);
+    height: 60px;
+    width: 1px;
+}
+
+html {
+    background-color: var(--bg1);
+}
+
+body {
+    font-family: var(--font-text);
+}
+
+/*----==== Estilos para Eventos ====---- */
+
+.evento-d {
+    background-color: var(--rojo);
+    color: var(--azul);
+
+}
+
+.eventos-header {
+    background-color: var(--blanco);
+    padding-top: 10%;
+}
+
+.evento-i {
+    background-color: var(--azul-light);
+    color: var(--blanco);
+}
+
+.tabs-panel,
+.tabs-content,
+.tabs-content.vertical {
+    background-color: var(--azul-light);
+    border: 0px solid var(--azul-light);
+    color: var(--blanco);
+}
+
+#tab-1,
+#tab-2 {
+    background-color: var(--azul);
+    margin: 3%;
+}
+
+#tab-1 div div a,
+#tab-1 div a {
+    color: var(--blanco);
+}
+
+#tab-2 div div a,
+#tab-2 div a {
+    color: var(--blanco);
+}
+
+/*----==== Estilos para Contacto y Confirmación ====---- */
+
+.form-i {
+    background-image: url(../img/EventosYContacto-img/mask.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.form-d {
+    background-color: var(--rojo);
+}
+
+textarea {
+    resize: none;
+}
+
+.button {
+    background-color: var(--azul);
+}
+
+.button:hover {
+    background-color: var(--azul-light);
+}
+
+#boton-form button {
+    color: var(--blanco);
+}
+
+label {
+    font-family: var(--font-title);
+    font-weight: 600;
+}
+
+.button{
+    border-radius: 100px;
+}

@@ -1,0 +1,395 @@
+/* -----=====   FUENTES   =====----- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+
+/* -----=====   ROOT   =====----- */
+:root {
+    --bg: #FFFFFF;
+    --bg1: #F4F4F4;
+    --color1: #F74464;
+    --hover: rgb(245, 93, 121);
+    --color2: #374258;
+    --color3: #6A7285;
+    --color4: #C4C4C4;
+    --font-title: 'Raleway', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+    --size: 18px;
+}
+
+/* -----===== UNIVERSALES (HTML, BODY, MAIN)=====----- */
+* {
+    margin: 0%;
+}
+
+html {
+    font-size: var(--size);
+    background-color: var(--bg1);
+}
+
+body {
+    font-family: var(--font-text);
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+/* -----===== BARRA DE NAVEGACION =====----- */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0px 11px 21px -9px rgba(0, 0, 0, 0.75);
+}
+
+.main-logo {
+    flex-basis: 30%;
+}
+
+#logo {
+    width: 20%;
+    margin: auto 20%;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all .2s linear;
+    background-color: rgba(0, 0, 0, .7);
+    z-index: 100;
+}
+
+.main-nav.show {
+    margin-left: 0;
+}
+ 
+.nav-links {
+    background-color: rgb(250, 250, 250);
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+    font: 1.5rem var(--font-title);
+    font-weight: 800;
+    padding-bottom: 5%;
+}
+
+.link-item {
+    margin-top: 3rem;
+    color: var(--color2);
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+.link-item::after {
+    position: absolute;
+    content: "";
+    background-color: var(--color3);
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: 0.3s ease all;
+}
+
+.link-item:hover::after {
+    width: 100%;
+}
+
+#contacto{
+    background-color: var(--color1);
+    color: var(--bg);
+    padding: 1.5%;
+    border-radius: 50px;
+    transition: 0.3s ease all;
+}
+#contacto:hover{
+    background-color: #ed133b;
+}
+#contacto:hover::after{
+    width: 0;
+}
+
+.button-menu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.button-menu span {
+    width: 40px;
+    height: 7px;
+    margin-bottom: 5px;
+    position: relative;
+    background: var(--color2);
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all .2s linear;
+    margin-right: 100%;
+}
+
+.button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: var(--bg);
+}
+
+.button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+.button-menu.close span:nth-child(3) {
+    display: none;
+}
+
+#finger {
+    width: 30px;
+    margin-right: 70%;
+}
+
+.button-menu.close #finger:nth-child(1) {
+    width: 40px;
+}
+
+/* -----===== INICIO DE PIE =====----- */
+/*Inicio de pie*/
+footer {
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #374258;
+    border-top: var(--bg1) solid 10px;
+}
+
+/*Contenedor uno de pie*/
+.pie1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 1.5%;
+    height: 210px;
+}
+
+.pie1 img {
+    width: 90%;
+    height: 75%;
+}
+
+/*Contenedor dos de pie*/
+.pie2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    flex: 1;
+    margin: 1.5%;
+    height: auto;
+    color: white;
+    line-height: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/*Contenedor tres de pie*/
+.pie3 {
+    display: flex;
+    flex: 1;
+    margin: 1.5%;
+    height: 210px;
+    color: white;
+    line-height: 10px;
+}
+
+.redes {
+    width: 100px;
+    height: 100px;
+    background-color: #f74464;
+    border-radius: 50%;
+    margin: 5% 5%;
+}
+
+.redes img {
+    width: 100%;
+    height: 100%;
+}
+
+.redes:hover {
+    transform: scale(1.1);
+}
+
+/* -----===== Contenido =====----- */
+#principal {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.inicio {
+    width: 100%;
+    height: 200px;
+    background-color: #f4f4f4;
+}
+
+.concepto {
+    width: 100%;
+    height: 200px;
+    background-color: #374258;
+}
+
+.espacio {
+    width: 100%;
+    height: 200px;
+    background-color: #6a7285;
+}
+
+/* -----===== MEDIAS QUERIES =====----- */
+@media only screen and (max-width: 1201px) {
+    .pie1 img {
+        height: 65%;
+    }
+}
+
+@media only screen and (max-width: 1121px) {
+    .pie1 img {
+        height: 60%;
+    }
+}
+
+@media only screen and (max-width: 1090px) {
+    .pie2 {
+        font-size: 16px;
+        flex: 1;
+        margin: 1.5%;
+        height: auto;
+        color: white;
+        line-height: 30px;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width:1800px) {
+    .nav-links {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .button-menu {
+        display: none;
+    }
+
+    .main-nav {
+        position: static;
+        flex-basis: 70%;
+        height: 100%;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        background: var(--bg);
+    }
+
+    .link-item {
+        display: inline-block;
+        margin-right: 4rem;
+    }
+}
+
+@media only screen and (max-width: 1001px) {
+    .pie1 img {
+        height: 55%;
+    }
+
+    .pie2 {
+        margin: 1.5%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 861px) {
+    .pie1 img {
+        height: 50%;
+    }
+
+    .redes {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .pie1,
+    .pie2,
+    .pie3 {
+        width: 100%;
+        margin: 2% 0;
+    }
+
+    .pie1 img {
+        width: 70%;
+        height: 75%;
+    }
+
+    .redes {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #logo {
+        width: 50%;
+    }
+    .main-header{
+        padding: 3% 0%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #logo {
+        width: 60%;
+    }
+
+    .pie1 img {
+        width: 90%;
+        height: auto;
+    }
+
+    .pie2 {
+        font-size: 14px;
+        height: auto;
+    }
+
+    .pie3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redes {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}

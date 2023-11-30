@@ -1,0 +1,133 @@
+/* -----=====   FUENTES   =====----- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+/* -----=====   ROOT   =====----- */
+:root {
+    --bg: #FFFFFF;
+    --bg1: #F4F4F4;
+    --color1: #F74464;
+    --hover: rgb(245, 93, 121);
+    --color2: #374258;
+    --color3: #6A7285;
+    --color4: #C4C4C4;
+    --font-title: 'Raleway', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+    --size:18px;
+}
+/* -----=====   LETRA   =====----- */
+h1{
+    font-family: var(--font-title); font-size: 2rem;
+    text-align: center;
+    color: var(--bg);
+    margin: 5% 0% 0%;
+}
+#ubi{
+    font-family: var(--font-text);
+    color: var(--bg);
+    line-height: 150%;
+    margin: 5% 10%;
+    text-align: center;
+}
+/* -----=====   MAPA   =====----- */
+#map{
+    width: 100%;
+    display: flex;
+    background-color: #415378 ;
+}
+#mapa{
+    width: 50%;
+    overflow:hidden;
+    padding-bottom:92%;
+    position:relative;
+    height:0;
+    line-height: 0; 
+}
+#mapa iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+/* -----=====   Info   =====----- */
+#cinta{
+    width: 50%;
+}
+#hang{
+    background-color: #F74464;
+    width: 70%;
+    min-height: 800px;
+    margin: 30% 15% 10%;
+    border-radius: 0% 0% 10% 10%;
+    display: inline-flex;
+    flex-direction: column;
+    z-index: -1;
+    opacity: 0;
+	animation: fadeIn 1s ease-in both;
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translate3d(0, -10%, 0);
+	}
+	to {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+}
+#imago{
+    width: 60%;
+    padding: 10% 20% 5%;
+}
+#mascota{
+    width: 70%;
+    transform: scaleX(-1);
+    padding: 10% 20%;
+}
+#mascota1{
+    display: none;
+    width: 70%;
+    transform: scaleX(-1);
+    padding: 10% 20%;
+}
+#mascota2{
+    display: none;
+    width: 80%;
+    padding: 10% 10%;
+}
+/* -----===== MEDIAS QUERIES =====----- */
+@media screen and (max-width: 720px){
+    #map{
+        flex-direction: column;
+    }
+    #cinta{
+        width: 100%;
+        min-height: 900px;
+    }
+    #hang{
+        margin: 20% 15% 10%;
+    }
+    #mapa{
+        width: 100%;
+    }
+    #mascota{
+        display: none;
+    }
+    #mascota1{
+        display: block;
+    }
+}
+  
+@media screen and (max-width: 480px){
+    #logo{
+        width: 60%;
+    }
+    #hang{
+        margin: 25% 15% 10%;
+    }
+    #mascota1{
+        display: none;
+    }
+    #mascota2{
+        display: block;
+    }
+}
